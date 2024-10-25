@@ -51,5 +51,53 @@
         }
       }
     }
+
+    .rtl-text {
+      direction: rtl;
+      text-align: justify;
+    }
+
+    .read-more-btn {
+      @apply text-primary bg-primary-foreground font-medium cursor-pointer p-2 rounded ;
+    
+      &:hover {
+        @apply bg-primary text-primary-foreground;
+      }
+    }
+    .search-engine {
+      height: 100vh; /* Full height of the viewport */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .search-container {
+      position: sticky;
+      top: 0;
+      z-index: 10; /* Subtle shadow for separation */
+      padding: 1rem;
+    }
+    
+    .results-container {
+      overflow-y: auto; /* Enable vertical scrolling */
+      flex: 1; /* Take up the remaining space */
+      padding: 1rem; /* Add some padding inside */
+      margin-top: 1rem; /* Add space between search bar and results */
+      scrollbar-width: none; /* Hide scrollbar in Firefox */
+    }
+    
+    /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+    .results-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Space between each result */
+    .document {
+      margin-bottom: 1.5rem; /* Adjust margin for spacing */
+    }
+    
+    .document:last-child {
+      margin-bottom: 0; /* Avoid extra space at the bottom */
+    }
+    
   }
   

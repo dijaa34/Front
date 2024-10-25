@@ -11,6 +11,12 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma'),
+      require('@tailwindcss/line-clamp'), // Add this line
+      require('@tailwindcss/forms'),
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/aspect-ratio'),
+      require('tailwind-scrollbar'),
+      'prettier-plugin-tailwindcss',
     ],
     client: {
       jasmine: {
@@ -37,5 +43,5 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     singleRun: false,
     restartOnFileChange: true,
-  })
-}
+  });
+};

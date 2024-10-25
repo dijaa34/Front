@@ -1,18 +1,29 @@
-<div
-  class="flex h-screen flex-col items-center gap-2 rounded-lg  p-8 text-center shadow-sm">
-  <h1 class="text-4xl font-bold text-foreground">
-    {{'page1.title' | translate}}
-   </h1>
-  <p class="text-base text-muted-foreground">
-    {{'page1.subtitle' | translate}}
+<div class="container">
+  <h1 class="title">Query Processor</h1>
+  <p class="description">
+    Ready to get extraordinary insights from your data? Let’s make it happen!
+  </p>
+  <p class="goal">
+    The multi-source search component is an intelligent system that allows users to search across multiple types of data sources (text files, Excel files, relational databases, knowledge graphs, etc.) using natural language queries. The main goal of this component is to simplify interaction with various sources of information by eliminating the need to master complex query syntaxes, such as SQL, or to understand the underlying data structure.
   </p>
 
-  <p class="text-sm text-muted max-w-lg mt-6 mb-6">
-    {{ 'page1.description' | translate }}
-  </p>
+  <div class="support-boxes">
+    <div class="support-box">
+      <i class="fas fa-file-alt"></i>
+      <h3>Text Search</h3>
+      <p>Effortlessly search through your text files and extract valuable insights.</p>
+    </div>
 
+    <div class="support-box">
+      <i class="fas fa-database"></i>
+      <h3>SQL Query</h3>
+      <p>Utilize SQL queries to access and manipulate data in relational databases.</p>
+    </div>
 
-  <app-button (buttonClick)="goToPage2()" impact="bold" tone="primary" shape="rounded" size="medium">
-    {{'page1.button_text' | translate}}
-  </app-button>
+    <div class="support-box">
+      <i class="fas fa-file-excel"></i>
+      <h3>Excel Data</h3>
+      <p>Seamlessly interact with Excel files to find and analyze your data.</p>
+    </div>
+  </div>
 </div>
