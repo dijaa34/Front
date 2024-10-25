@@ -2,9 +2,9 @@
   "sideBar": {
     "title": "",
     "first_link": "Home",
-    "second_link": "Search",
-    "third_link": "SQL",
-    "fourth_link": "Fourth Link",
+    "second_link": "Text Search System ",
+    "third_link": "SQL Search System",
+    "fourth_link": "Excel Search System",
     "config": "Configuration",
     "settings": "Settings"
   },

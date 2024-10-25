@@ -1,0 +1,36 @@
+<div class="sql-engine">
+  <!-- Centered Title with Styling -->
+  <h1 class="text-4xl font-extrabold text-center mb-4">Excel Search System</h1>
+  
+  <!-- Description Section -->
+  <p class="text-center text-gray-600 mb-8">
+    This component allows users to upload an Excel or CSV file and enter natural language queries to retrieve information. 
+    The system interprets the query and provides a relevant response based on the file's content.
+  </p>
+  
+  <!-- Search Container -->
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="search()"
+      placeholder="Enter search term..."
+      class="search-input"
+    />
+    <button (click)="search()" class="search-btn bg-primary">Search</button>
+  </div>
+  
+  <!-- Loading Message -->
+  <div *ngIf="isLoading" class="loading-message">Loading results...</div>
+  
+  <!-- Display Answer if Available -->
+  <div *ngIf="answer && searchPerformed && !isLoading" class="answer-container space-y-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Search Result:</h2>
+    <p class="text-lg text-center">{{ answer }}</p>
+  </div>
+  
+  <!-- No Results Message -->
+  <div *ngIf="!answer && searchPerformed && !isLoading" class="no-results">
+    <p class="text-center">No results found.</p>
+  </div>
+</div>

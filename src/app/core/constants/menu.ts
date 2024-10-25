@@ -8,22 +8,22 @@ export class Menu {
       items: [
         {
           icon: 'fa fa-home',
-          label: 'sideBar.first_link',
+          label: 'sideBar.first_link', // Home
           route: '/home/page1',
         },
         {
-          icon: 'fa fa-th-large',
-          label: 'sideBar.second_link',
+          icon: 'fa fa-file-alt', // Text icon
+          label: 'sideBar.second_link', // Text Search System
           route: '/home/page2',
         },
         {
-          icon: 'fas fa-user-cog',
-          label: 'sideBar.third_link',
+          icon: 'fas fa-database', // Database icon for SQL
+          label: 'sideBar.third_link', // SQL Search System
           route: '/home/page3',
         },
         {
-          icon: 'fas fa-project-diagram',
-          label: 'sideBar.fourth_link',
+          icon: 'fa fa-file-excel', // Excel icon
+          label: 'sideBar.fourth_link', // Excel Search System
           route: '/home/page4',
         },
       ],
@@ -34,7 +34,7 @@ export class Menu {
       items: [
         {
           icon: 'fa fa-cog',
-          label: 'sideBar.settings',
+          label: 'sideBar.settings', // Settings
           route: '/settings',
         },
       ],

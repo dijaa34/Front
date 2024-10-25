@@ -3,7 +3,8 @@ import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { Page1Component } from './pages/page1/page1.component';
 import { SearchEngineComponent } from './pages/page2/search-engine.component';
-import { Page3Component } from './pages/page3/page3.component';
+import { SQLEngineComponent } from './pages/page3/sql_engine.component';
+import { EXCELEngineComponent } from './pages/page4/excel_engine.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'home/page1', pathMatch: 'full' },
       { path: 'page1', component : Page1Component},
       { path: 'page2', component :SearchEngineComponent },
-      { path: 'page3', component : Page3Component},
+      { path: 'page3', component : SQLEngineComponent},
+      { path: 'page4', component : EXCELEngineComponent},
       { path: '**', redirectTo: 'errors/404' },
     ],
   },
