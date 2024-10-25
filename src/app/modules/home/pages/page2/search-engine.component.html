@@ -8,17 +8,33 @@
       placeholder="Enter search term..."
       class="search-input"
     />
-    <button (click)="search()" class="search-btn">Search</button>
+    <button (click)="search()" class="search-btn bg-primary">Search</button>
   </div>
 
-  <div *ngIf="results.length > 0" class="results-container">
-    <h2>Search Results:</h2>
-    <ul>
-      <li *ngFor="let result of results">{{ result }}</li>
-    </ul>
+  <div *ngIf="results.length > 0" class="results-container space-y-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Search Results:</h2>
+  
+    <div 
+      *ngFor="let result of results" 
+      class="document bg-white shadow-lg rounded-lg p-6 max-w-3xl mx-auto relative"
+    >
+      <!-- Document Content -->
+      <div class="mb-4">
+        <p class="text-lg leading-relaxed text-gray-800 whitespace-pre-line">
+          {{ result.content }}
+        </p>
+      </div>
+  
+      <!-- Document Footer -->
+      <div class="flex justify-between items-center text-sm text-gray-500 mt-4 border-t pt-2">
+        <span>Document ID: <strong>{{ result.id }}</strong></span>
+        <span>Score: <strong>{{ result.score.toFixed(2) }}</strong></span>
+      </div>
+    </div>
   </div>
+  
 
-  <div *ngIf="!results.length && searchPerformed">
+  <div *ngIf="!results.length && searchPerformed" class="no-results">
     <p>No results found.</p>
   </div>
 </div>

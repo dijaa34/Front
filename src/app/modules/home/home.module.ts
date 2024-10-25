@@ -6,12 +6,13 @@ import { CommonModule } from '@angular/common';
 import { SearchEngineComponent } from './pages/page2/search-engine.component'; 
 
 @NgModule({
-  declarations: [SearchEngineComponent],
+  declarations: [],
   imports: [
     HomeRoutingModule,
     TranslateModule,
     FormsModule, 
-    CommonModule 
+    CommonModule,
+    SearchEngineComponent
   ],
   exports: [TranslateModule]
 })
