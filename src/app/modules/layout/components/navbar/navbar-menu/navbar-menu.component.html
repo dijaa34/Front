@@ -1,0 +1,40 @@
+<div class="flex items-center space-x-3">
+  <!-- Dark Mode / Light Mode Switcher -->
+  <button (click)="toggleThemeMode()" class="p-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 focus:outline-none">
+    @if ('light' == themeService.theme().mode) {
+      <i class="far fa-moon"></i>
+    } @else {
+      <i class="far fa-sun"></i>
+    }
+  </button>
+
+  <!-- Notifications -->
+  <button class="p-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 focus:outline-none">
+    <i class="far fa-bell"></i>
+  </button>
+
+  <!-- Language Switcher -->
+  <div class="relative">
+    <button (click)="toggleLanguageDropdown()" class="p-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 focus:outline-none">
+      @if (selectedLanguage === 'en') {
+        <img src="assets/images/logos/united-kingdom.png" class="h-5 w-5">
+      } @else {
+        <img src="assets/images/logos/france.png" class="h-5 w-5">
+      }
+    </button>
+
+    <!-- Language Dropdown -->
+    <div [ngClass]="{'hidden': !isLanguageDropdownOpen, 'block': isLanguageDropdownOpen}" 
+         class="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-600">
+      <button (click)="selectLanguage('en')" 
+              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 bg-white rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600">
+        <img src="assets/images/logos/united-kingdom.png" class="h-5 w-5 mr-2"> English
+      </button>
+      <button (click)="selectLanguage('fr')" 
+              class="flex items-center w-full px-4 py-2 text-sm text-gray-700 bg-white rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600">
+        <img src="assets/images/logos/france.png" class="h-5 w-5 mr-2"> Français
+      </button>
+      <!-- Add more languages here -->
+    </div>
+  </div>
+</div>

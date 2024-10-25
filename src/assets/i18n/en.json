@@ -1,0 +1,109 @@
+{
+  "sideBar": {
+    "title": "",
+    "first_link": "Home",
+    "second_link": "Search",
+    "third_link": "SQL",
+    "fourth_link": "Fourth Link",
+    "config": "Configuration",
+    "settings": "Settings"
+  },
+  "profileMenu" : {
+    "yourProfile" : "Your Profile",
+    "settings" : "Settings",
+    "LogOut" : "Log out",
+    "color" : "Color",
+    "mode" : "Mode",  
+    "light" : "Light",
+    "dark" : "Dark",
+    "base": "Base",
+    "yellow": "Yellow",
+    "green": "Green",
+    "blue": "Blue",
+    "orange": "Orange",
+    "red": "Red",
+    "violet": "Violet"
+  },
+  "error" : {
+    "pageNotFound" : " We can't find that page. You can go back to the previous page or go to the homepage.",
+    "homePage" : "Home page",
+    "error500" : " Please try again later. If the issue persists, feel free to contact us for assistance.",
+    "error500Title" : "Oops! Server Error"
+  },
+  "signIn": {
+      "title": "Hello Again",
+      "subtitle": "Enter your credential to access your account.",
+      "googleLogin": "Log in with Google",
+      "or": "or",
+      "email": {
+        "label": "Email address",
+        "requiredError": "Required field",
+        "invalidError": "Email must be a valid email address"
+      },
+      "password": {
+        "label": "Password",
+        "requiredError": "Required field"
+      },
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot your password?",
+      "submit": "Sign in",
+      "notMember": "Not a Member yet?",
+      "signUp": "Sign up"
+    },
+  "signUp": {
+      "title": "Sign Up",
+      "subtitle": "Let's get started with your 30 day free trial",
+      "googleSignUp": "Sign Up with Google",
+      "or": "or",
+      "email": {
+        "label": "Email address"
+      },
+      "password": {
+        "label": "Password",
+        "passwordMeeter": {
+          "hint": "Use 8 or more characters with a mix of letters, numbers & symbols."
+        }
+      },
+      "confirmPassword": {
+        "label": "Confirm Password"
+      },
+      "acceptTerms": {
+        "text": "I Accept the",
+        "terms": "Terms"
+      },
+      "submit": "Sign up",
+      "alreadyAccount": {
+        "text": "Already have an Account?",
+        "signIn": "Sign in"
+      }
+    }
+  ,
+  "twoSteps": {
+    "title": "Two Step Verification",
+    "subtitle": "Enter the verification code we sent to",
+    "maskedPhone": "******2289",
+    "submit": "Submit"
+  },
+  "forgotPassword" : {
+    "title" : "Forgot Password",
+    "subtitle": "Enter your email to reset your password.",
+    "label": "Adresse e-mail",
+    "submit" : "Submit",
+    "cancel" : "Cancel"
+  },
+  "newPassword": {
+    "title": "Setup New Password",
+    "subtitle": "Have you already reset the password?",
+    "signIn": "Sign in",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "passwordHelper": "Use 8 or more characters with a mix of letters, numbers & symbols.",
+    "submit": "Submit"
+  },
+  "page1" : {
+    "title": "Query processor agent",
+    "subtitle": "Ready to get extraordinary insights from your data? Let’s make it happen!",
+    "button_text": "Take Me Back to Page Two!",
+    "description" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
+  }
+}

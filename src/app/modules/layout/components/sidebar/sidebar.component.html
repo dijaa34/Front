@@ -1,0 +1,24 @@
+<nav
+  [ngClass]="menuService.showSideBar ? 'w-48 2xl:w-64' : 'w-[70px]'"
+  class="scrollbar-thumb-rounded scrollbar-track-rounded hidden h-full flex-col justify-between overflow-auto bg-background pt-3 transition-all duration-300 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-card lg:flex">
+  <div class="px-4">
+    <!-- Logo -->
+    <div class="relative h-10">
+      <a
+        (click)="toggleSidebar()"
+        class="text-lg font-bold text-foreground flex cursor-pointer items-center justify-center rounded  p-2 focus:outline-none focus:ring-1">
+        <img src="assets/images/logos/sqlagent.png" alt="logo" class="h-6 w-6">
+      </a>
+    </div>
+
+    <!-- Separator -->
+    <div class="pt-3">
+      <hr class="border-dashed border-muted" />
+    </div>
+
+    <!-- Menu Items -->
+    <app-sidebar-menu></app-sidebar-menu>
+  </div>
+
+ 
+</nav>

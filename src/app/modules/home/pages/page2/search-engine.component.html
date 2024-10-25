@@ -1,0 +1,24 @@
+<div class="search-engine">
+  <h1>Text Search System</h1>
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="search()"
+      placeholder="Enter search term..."
+      class="search-input"
+    />
+    <button (click)="search()" class="search-btn">Search</button>
+  </div>
+
+  <div *ngIf="results.length > 0" class="results-container">
+    <h2>Search Results:</h2>
+    <ul>
+      <li *ngFor="let result of results">{{ result }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="!results.length && searchPerformed">
+    <p>No results found.</p>
+  </div>
+</div>

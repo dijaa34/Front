@@ -1,0 +1,113 @@
+{
+  "sideBar": {
+    "title": "Ceci est un titre",
+    "first_link": "Premier Lien",
+    "second_link": "Deuxième Lien",
+    "third_link": "Troisième Lien",
+    "fourth_link": "Quatrième Lien",
+    "config": "Configuration",
+    "settings": "Paramètres"
+  },
+  "profileMenu": {
+    "yourProfile": "Votre Profil",
+    "settings": "Paramètres",
+    "LogOut": "Déconnexion",
+    "color": "Couleur",
+    "mode": "Mode",
+    "light": "Clair",
+    "dark": "Sombre",
+    "base": "Base",
+    "yellow": "Jaune",
+    "green": "Vert",
+    "blue": "Bleu",
+    "orange": "Orange",
+    "red": "Rouge",
+    "violet": "Violet"
+  },
+  "error": {
+      "pageNotFound": "Nous ne pouvons pas trouver cette page. Vous pouvez retourner à la page précédente ou aller à la page d'accueil.",
+      "homePage": "Page d'accueil",
+      "error500": "Veuillez réessayer plus tard. Si le problème persiste, n'hésitez pas à nous contacter pour obtenir de l'aide.",
+      "error500Title": "Oups ! Erreur du serveur"
+  },
+  "signIn": {
+      "title": "Bonjour",
+      "subtitle": "Entrez vos identifiants pour accéder à votre compte.",
+      "googleLogin": "Se connecter avec Google",
+      "or": "ou",
+      "email": {
+        "label": "Adresse e-mail",
+        "requiredError": "Champ requis",
+        "invalidError": "L'e-mail doit être une adresse e-mail valide"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "requiredError": "Champ requis"
+      },
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "notMember": "Pas encore membre ?",
+      "signUp": "S'inscrire"
+  },
+  "signUp": {
+      "title": "Inscription",
+      "subtitle": "Commençons avec votre essai gratuit de 30 jours",
+      "googleSignUp": "Inscription avec Google",
+      "or": "ou",
+      "email": {
+        "label": "Adresse e-mail"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "passwordMeeter": {
+          "hint": "Utilisez 8 caractères ou plus avec un mélange de lettres, de chiffres et de symboles."
+        }
+      },
+      "confirmPassword": {
+        "label": "Confirmer le mot de passe"
+      },
+      "acceptTerms": {
+        "text": "J'accepte les",
+        "terms": "Conditions"
+      },
+      "submit": "S'inscrire",
+      "alreadyAccount": {
+        "text": "Vous avez déjà un compte ?",
+        "signIn": "Se connecter"
+      }
+  },
+  "twoSteps": {
+    "title": "Vérification en deux étapes",
+    "subtitle": "Entrez le code de vérification que nous avons envoyé à",
+    "maskedPhone": "******2289",
+    "submit": "Soumettre"
+  },
+  "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Entrez votre e-mail pour réinitialiser votre mot de passe.",
+      "label": "Adresse e-mail",
+      "submit": "Soumettre",
+      "cancel": "Annuler"
+  }
+  ,
+  "newPassword": {
+    "title": "Configurer un nouveau mot de passe",
+    "subtitle": "Avez-vous déjà réinitialisé le mot de passe ?",
+    "signIn": "Se connecter",
+    "passwordLabel": "Mot de passe",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "passwordHelper": "Utilisez 8 caractères ou plus avec un mélange de lettres, de chiffres et de symboles.",
+    "submit": "Soumettre"
+  },
+  "page1" : {
+    "welcome_message": "Bienvenue à la page un !",
+    "ready_message": "Prêt à créer quelque chose d'extraordinaire ? Faisons-le !",
+    "button_text": "Ramenez-moi à la page deux !"
+  },
+  "page2" : {
+    "welcome_message": "Bienvenue à la page deux !",
+    "ready_message": "Prêt à créer quelque chose d'extraordinaire ? Faisons-le !",
+    "button_text": "Ramenez-moi à la page un !"
+  }
+}
