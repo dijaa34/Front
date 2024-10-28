@@ -9,31 +9,14 @@ import { Component, Renderer2 } from '@angular/core';
   standalone: true, // Standalone component
   imports: [CommonModule, FormsModule],
   templateUrl: './search-engine.component.html',
-  styleUrls: ['./search-engine.component.scss'
+  styleUrls: ['./search-engine.component.scss']
 })
-<<<<<<< HEAD
-export class SearchEngineComponent {
-  searchTerm: string = '';
-  results: string[] = [];
-  searchPerformed: boolean = false;
-
-  // Simulate a search operation
-  search() {
-    this.searchPerformed = true;
-    if (this.searchTerm.trim() === '') {
-      this.results = [];
-    } else {
-      // Fake search logic - replace this with real data fetching
-      this.results = ['Result 1', 'Result 2', 'Result 3'].filter(result =>
-        result.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
-=======
 
 export class SearchEngineComponent {
   searchTerm: string = ''; 
   results: any[] = []; 
   searchPerformed: boolean = false; 
-  apiUrl: string = 'http://192.168.13.63:8000/';
+  apiUrl: string = 'http://localhost:8000/';
   expandedIds: Set<string> = new Set(); // Track expanded content
 
   constructor(private http: HttpClient) {}
@@ -50,7 +33,6 @@ export class SearchEngineComponent {
       this.expandedIds.delete(id); // Collapse content
     } else {
       this.expandedIds.add(id); // Expand content
->>>>>>> 83a71772ae19e2a50376f28648b9fcef39590e98
     }
   }
 
@@ -95,4 +77,3 @@ export class SearchEngineComponent {
 
   
 }
-

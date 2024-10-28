@@ -13,7 +13,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home/page1', pathMatch: 'full' },
       { path: 'page1', component : Page1Component},
-      { path: 'page2', component :SearchEngineComponent },
+      { path: 'page2', component : SearchEngineComponent },
       { path: 'page3', component : SQLEngineComponent},
       { path: 'page4', component : EXCELEngineComponent},
       { path: '**', redirectTo: 'errors/404' },

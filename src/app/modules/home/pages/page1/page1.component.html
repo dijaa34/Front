@@ -1,29 +1,69 @@
-<div class="container">
-  <h1 class="title">Query Processor</h1>
-  <p class="description">
+<div class="text-center text-gray-900 dark:text-gray-100">
+  <h1 class="text-4xl font-bold mb-4">Query Processor</h1>
+  <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
     Ready to get extraordinary insights from your data? Let’s make it happen!
   </p>
-  <p class="goal">
-    The multi-source search component is an intelligent system that allows users to search across multiple types of data sources (text files, Excel files, relational databases, knowledge graphs, etc.) using natural language queries. The main goal of this component is to simplify interaction with various sources of information by eliminating the need to master complex query syntaxes, such as SQL, or to understand the underlying data structure.
+  <p class="text-base mb-10 text-gray-600 dark:text-gray-400 leading-relaxed">
+    The multi-source search component is an intelligent system that allows users to search across multiple types of data sources (text files, Excel files, relational databases, knowledge graphs, etc.) using natural language queries. 
+    The goal is to simplify interaction with various sources by eliminating the need for mastering query syntaxes like SQL or understanding complex data structures.
   </p>
 
-  <div class="support-boxes">
-    <div class="support-box">
-      <i class="fas fa-file-alt"></i>
-      <h3>Text Search</h3>
-      <p>Effortlessly search through your text files and extract valuable insights.</p>
+  <div class="flex flex-wrap justify-center gap-8">
+    <!-- Text Search -->
+    <div class="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-xl p-6 w-64 shadow-lg hover:shadow-xl transition-shadow">
+      <i class="fas fa-file-alt text-4xl text-primary dark:text-primary"></i>
+      <h3 class="text-2xl font-semibold mt-4">Text Search</h3>
+      <p class="mt-2 text-gray-600 dark:text-gray-400">
+        Effortlessly search through your text files and extract valuable insights.
+      </p>
+      <div class="flex justify-center mt-4">
+        <app-button 
+          (buttonClick)="goToPage2()" 
+          impact="bold" 
+          tone="primary" 
+          shape="rounded" 
+          size="medium">
+          {{'page1.search_button' | translate}}
+        </app-button>
+      </div>
     </div>
 
-    <div class="support-box">
-      <i class="fas fa-database"></i>
-      <h3>SQL Query</h3>
-      <p>Utilize SQL queries to access and manipulate data in relational databases.</p>
+    <!-- SQL Query -->
+    <div class="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-xl p-6 w-64 shadow-lg hover:shadow-xl transition-shadow">
+      <i class="fas fa-database text-4xl text-primary dark:text-primary"></i>
+      <h3 class="text-2xl font-semibold mt-4">SQL Query</h3>
+      <p class="mt-2 text-gray-600 dark:text-gray-400">
+        Utilize SQL queries to access and manipulate data in relational databases.
+      </p>
+      <div class="flex justify-center mt-4">
+        <app-button 
+          (buttonClick)="goToPage3()" 
+          impact="bold" 
+          tone="primary" 
+          shape="rounded" 
+          size="medium">
+          {{'page1.sql_button' | translate}}
+        </app-button>
+      </div>
     </div>
 
-    <div class="support-box">
-      <i class="fas fa-file-excel"></i>
-      <h3>Excel Data</h3>
-      <p>Seamlessly interact with Excel files to find and analyze your data.</p>
+    <!-- Excel Data -->
+    <div class="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-xl p-6 w-64 shadow-lg hover:shadow-xl transition-shadow">
+      <i class="fas fa-file-excel text-4xl text-primary dark:text-primary"></i>
+      <h3 class="text-2xl font-semibold mt-4">Excel Data</h3>
+      <p class="mt-2 text-gray-600 dark:text-gray-400">
+        Seamlessly interact with Excel files to find and analyze your data.
+      </p>
+      <div class="flex justify-center mt-4">
+        <app-button 
+          (buttonClick)="goToPage4()" 
+          impact="bold" 
+          tone="primary" 
+          shape="rounded" 
+          size="medium">
+          {{'page1.excel_button' | translate}}
+        </app-button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,49 +1,57 @@
-<div class="sql-engine">
-    <!-- Centered Title with Styling -->
-    <h1 class="text-4xl font-extrabold text-center mb-4">SQL Search System</h1>
-   
-    <!-- Description Section -->
-    <p class="text-center text-gray-600 mb-8">
-      This component allows users to upload an SQL file and enter natural language queries to retrieve information. 
-      The system interprets the query and provides a relevant response based on the file's content.
-    </p>
-     
-    <div class="search-container">
-       <input
-          type="text"
-          [(ngModel)]="searchTerm"
-          (keyup.enter)="search()"
-          placeholder="Enter search term..."
-          class="search-input"
-       />
-       <button (click)="search()" class="search-btn bg-primary">Search</button>
-    </div>
-     
-    <div *ngIf="isLoading" class="loading-message">Loading results...</div>
-   
-    <div *ngIf="results.length > 0" class="results-container space-y-6">
-       <h2 class="text-3xl font-bold text-center mb-8">Search Results:</h2>
-   
-       <table class="table-auto w-full border-collapse border border-gray-200">
-          <thead>
+<div class="sql-engine h-screen flex flex-col">
+   <!-- Header -->
+   <h1 class="text-3xl font-bold text-center shrinker">SQL Search System</h1>
+ 
+   <!-- Description Section -->
+   <p class="text-center text-gray-600 shrinker">
+     This component allows users to upload an SQL file and enter natural language queries to retrieve information. 
+     The system interprets the query and provides a relevant response based on the file's content.
+   </p>
+ 
+   <!-- Search Bar -->
+   <div class="search-container flex items-center justify-center gap-4 p-4 shrinker">
+     <input
+       type="text"
+       [(ngModel)]="searchTerm"
+       (keyup.enter)="search()"
+       placeholder="Enter search term..."
+       class="search-input border rounded-lg p-2 w-1/2"
+     />
+     <button (click)="search()" class="bg-primary text-white px-4 py-2 rounded-lg">Search</button>
+   </div>
+ 
+   <!-- Loading Indicator -->
+   <div *ngIf="isLoading" class="loading-message text-center text-gray-500 shrinker">Loading results...</div>
+ 
+   <!-- Results Section -->
+   <div class="results-container flex-1 p-4">
+     <div *ngIf="results.length > 0">
+       <h2 class="text-3xl font-bold text-center">Search Results:</h2>
+ 
+       <!-- Scrollable Table Wrapper -->
+       <div class="table-wrapper">
+         <table class="table-auto w-full border-collapse border border-gray-200">
+           <thead>
              <tr class="bg-gray-100">
-                <th *ngFor="let header of getTableHeaders()" class="border border-gray-300 px-4 py-2 text-left">
-                   {{ header }}
-                </th>
+               <th *ngFor="let header of getTableHeaders()" class="border border-gray-300 px-4 py-2 text-left">
+                 {{ header }}
+               </th>
              </tr>
-          </thead>
-          <tbody>
+           </thead>
+           <tbody>
              <tr *ngFor="let result of results" class="bg-white hover:bg-gray-50">
-                <td *ngFor="let item of result" class="border border-gray-300 px-4 py-2 text-left whitespace-normal">
-                   {{ item }}
-                </td>
+               <td *ngFor="let item of result" class="border border-gray-300 px-4 py-2 text-left">
+                 {{ item }}
+               </td>
              </tr>
-          </tbody>
-       </table>
-    </div>
-   
-    <div *ngIf="!results.length && searchPerformed" class="no-results">
+           </tbody>
+         </table>
+       </div>
+     </div>
+ 
+     <div *ngIf="!results.length && searchPerformed" class="text-center text-gray-500">
        <p>No results found.</p>
-    </div>
+     </div>
+   </div>
  </div>
  

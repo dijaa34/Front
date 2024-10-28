@@ -5,51 +5,48 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http'; // Require
 
 @Component({
   selector: 'app-sql-engine',
-  standalone: true, // Standalone component
+  standalone: true, 
   imports: [CommonModule, FormsModule],
-  templateUrl: './sql_engine.component.html', // Ensure this path is correct
-  styleUrls: ['./sql_engine.component.scss'] // Ensure this path is correct
+  templateUrl: './sql_engine.component.html',
+  styleUrls: ['./sql_engine.component.scss']
 })
 export class SQLEngineComponent {
-  searchTerm: string = ''; // Search term bound to input
-  results: any[] = [];  // Store search results (assuming array of objects)
-  searchPerformed: boolean = false; // Track if search was performed
-  isLoading: boolean = false; // Track loading state
-  apiUrl: string = 'http://127.0.0.1:5051/predict/'; // API endpoint
+  searchTerm: string = ''; 
+  results: any[] = [];  
+  searchPerformed: boolean = false; 
+  isLoading: boolean = false; 
+  apiUrl: string = 'http://localhost:8001/'; 
 
-  constructor(private http: HttpClient) {} // Inject HttpClient
+  constructor(private http: HttpClient) {}
 
-  // Search method to call the API
   search() {
     this.searchPerformed = true;
-    this.isLoading = true; // Start loading
+    this.isLoading = true;
 
     const term = this.searchTerm.trim();
-  
+
     if (term) {
-      // Prepare the request payload
       const payload = { nl_query: term };
 
       this.http.post<any>(this.apiUrl, payload).subscribe(
         (response) => {
-          this.results = response.result; // Assuming result holds the data
-          console.log(this.results);
+          this.results = response.result;
         },
         (error: HttpErrorResponse) => {
           console.error('Error fetching search results:', error);
-          this.results = []; // Reset results on error
+          this.results = [];
         },
         () => {
-          this.isLoading = false; // Stop loading when done
+          this.isLoading = false;
         }
       );
     } else {
-      this.results = []; // Clear results if no input
-      this.isLoading = false; // Stop loading if no input
+      this.results = [];
+      this.isLoading = false;
     }
   }
 
   getTableHeaders(): string[] {
-    return this.results.length > 0 ? Object.keys(this.results[0]) : []; // Dynamically get headers
+    return this.results.length > 0 ? Object.keys(this.results[0]) : [];
   }
 }
